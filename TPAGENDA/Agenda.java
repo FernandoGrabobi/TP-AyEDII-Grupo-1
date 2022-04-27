@@ -8,10 +8,10 @@ public class Agenda {
 	protected String fecha;
 	protected String descripcion; //nombre fecha descripcion
 
-	public Agenda(String Nombre,String Descripcion,String Fecha){
-			this.nombre=Nombre;
-			this.descripcion = Descripcion;
-			this.fecha = Fecha;			
+	public Agenda(String nombre,String descripcion,String fecha){
+			this.nombre=nombre;
+			this.descripcion = descripcion;
+			this.fecha = fecha;			
 		}
 	
 	
