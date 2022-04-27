@@ -8,7 +8,7 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        int menu = 0;
+        int menu = 9;
  
         while(menu != 0){
             System.out.println(" Presione 1 para cargar una nueva Tarea-Evento-Recordatorio a tu agenda ");

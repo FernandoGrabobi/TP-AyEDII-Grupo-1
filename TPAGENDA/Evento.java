@@ -1,5 +1,14 @@
 package TPAGENDA;
 
-public class Evento {
-    
+public class Evento extends Agenda {
+
+    protected String horaInicio, horaFin;
+    protected String lugarDelEvento;
+
+    ///Constructor
+
+    public void gettEvent (){
+
+        
+    }    
 }
