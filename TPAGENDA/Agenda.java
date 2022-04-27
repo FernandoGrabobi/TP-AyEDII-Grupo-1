@@ -4,9 +4,9 @@ package TPAGENDA;
 public class Agenda {
 	
 	
-	Protected String nombre;
-	Protected String fecha;
-	Protected String descripcion, //nombre fecha descripcion
+	protected String nombre;
+	protected String fecha;
+	protected String descripcion; //nombre fecha descripcion
 
 	public Agenda(String Nombre,String Descripcion,String Fecha){
 			this.nombre=Nombre;
