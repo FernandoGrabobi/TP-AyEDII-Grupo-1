@@ -1,11 +1,16 @@
 package TPAGENDA;
 import java.util.Scanner;
+///import java.text.SimpleDateFormat;
+///import java.util.Date;
 
 public class App {
-    
-    public static void main(String[] args) {
-        //chau fer
 
+    ///public static SimpleDateFormat fecha = new SimpleDateFormat("dd/MM/YYYY"); 
+    public static void main(String[] args) {
+    
+ 
+        
+        ///Date fechaActual = new Date();       
         Scanner input = new Scanner(System.in);
 
         int menu = 9;
