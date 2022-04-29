@@ -1,31 +1,16 @@
 package TPAGENDA;
-
-import javax.sound.midi.Synthesizer;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-
 public class Tarea extends Agenda{
 
-    JCheckBox chequear, chequear2;
+    boolean check;    
 
-    public Tarea(String nombre, String descripcion, String fecha, long ID){
+    public Tarea(String nombre, String descripcion, String fecha, long ID, boolean check){
         super(nombre, descripcion, fecha, ID);
-
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.ID = ID;
+        this.check = check;
        
-    }
-
-    public void iniciarCheck(){
-
-        chequear = new JCheckBox();
-        chequear.setText("tarea Realizada");
-        chequear.setBounds(20, 30, 120, 40);
-
-        chequear2 = new JCheckBox();
-        chequear2.setText("tarea faltante");
-        chequear2.setBounds(20, 60, 120, 40);
-
-        //add(chequear);
-        //add(chequear2);
-    }
+    } 
 
 }
