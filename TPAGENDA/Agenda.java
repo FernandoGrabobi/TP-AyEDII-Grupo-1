@@ -7,11 +7,13 @@ public class Agenda {
 	protected String nombre;
 	protected String fecha;
 	protected String descripcion; //nombre fecha descripcion
+	protected Long ID;
 
-	public Agenda(String nombre,String descripcion,String fecha){
+	public Agenda(String nombre,String descripcion,String fecha,Long ID){
 			this.nombre=nombre;
 			this.descripcion = descripcion;
 			this.fecha = fecha;			
+			this.ID = ID;
 		}
 	
 	
