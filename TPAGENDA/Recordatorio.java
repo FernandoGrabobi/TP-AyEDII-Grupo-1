@@ -3,18 +3,18 @@ package TPAGENDA;
 public class Recordatorio extends Agenda {
     
     //Defini una variable del tipo string 
-    protected String hora;
+    protected String horaRecordatorio;
     
-    public Recordatorio(String Nombre,String Descripcion,String Fecha, Long ID){
-        super(Nombre, Descripcion, Fecha, ID);
+    public Recordatorio(String Nombre,String Descripcion,String Fecha){
+        super(Nombre, Descripcion, Fecha);
     }
 
-    public void set_Hora(String hora){
-        this.hora = hora;    
+    public void setHoraRecordatorio(String horaRecordatorio){
+        this.horaRecordatorio = horaRecordatorio;    
     }
     
-    public String get_Hora(){
-        return hora;
+    public String setHoraRecordatorio(){
+        return horaRecordatorio;
     }
 
 

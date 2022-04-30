@@ -3,45 +3,24 @@ package TPAGENDA;
 
 public class Agenda {
 	
-	
 	protected String nombre;
 	protected String fecha;
-	protected String descripcion; //nombre fecha descripcion
+	protected String descripcion;
 	protected Long ID;
 
-	public Agenda(String nombre,String descripcion,String fecha,Long ID){
+	public Agenda(String nombre,String descripcion,String fecha){
 			this.nombre=nombre;
 			this.descripcion = descripcion;
-			this.fecha = fecha;			
-			this.ID = ID;
+			this.fecha = fecha;
 		}
-	
-	
-	
-	/**
-
-	static void set_Nombre(String nombre){
-		This.nombre = nombre;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
-	static void set_Fecha(String fecha){
-		This.fecha = fecha;
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
 	}
-	static void set_Descripcion(String descripcion){
-		This.descripcion = descripcion;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
-
-	static String get_Nombre(){
-		return nombre;
-	}
-	static String get_Fecha(){
-		return fecha;
-	}
-	static String get_Descripcion(){
-		return descripcion;
-	}
-
-**/
-
-
 }
 

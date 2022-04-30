@@ -2,16 +2,22 @@ package TPAGENDA;
 
 public class Evento extends Agenda {
 
-    protected String horaInicio, horaFin;
+    protected String horaInicioEvento, horaFinEvento;
     protected String lugarDelEvento;
 
 
     ///Constructor
-
-    Evento (String nombre, String descripcion, String fecha, String horaInicio, String horaFin, String lugarDelEvento, Long ID){
-        super(nombre,descripcion,fecha,ID);
-        this.horaInicio = horaInicio;
-        this.horaFin = horaFin;
-        this.lugarDelEvento = lugarDelEvento;
+    Evento (String nombre, String descripcion, String fecha){
+        super(nombre,descripcion,fecha);
     }    
+    public void setHoraInicio(String horaInicioEvento){
+        this.horaInicioEvento=horaInicioEvento;
+    }
+    public void setHoraFin(String horaFinEvento){
+        this.horaFinEvento=horaFinEvento;
+    }
+    public void setLugarDelEvento(String lugarDelEvento){
+        this.lugarDelEvento=lugarDelEvento;
+    }
 }
+
