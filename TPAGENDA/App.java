@@ -1,7 +1,8 @@
 package TPAGENDA;
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class App {
     
@@ -11,30 +12,49 @@ public class App {
         System.out.flush();  
     }
     
+    public static LocalDate dateInput(String userInput) {
+
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date = LocalDate.parse(userInput, dateFormat);
+    
+        return date ;
+    }
+
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
         int opcionesMenu = 0, opcionesSeleccion = 0;
-        String nombre,descripcion,fecha,horaRecordatorio,horaInicioEvento,horaFinEvento,lugarDelEvento;
+        String nombre,descripcion,horaRecordatorio,horaInicioEvento,horaFinEvento,lugarDelEvento;
+        LocalDate fecha;
         ArrayList<Evento> events = new ArrayList<Evento>();
         ArrayList<Tarea> tasks = new ArrayList<Tarea>();
         ArrayList<Recordatorio> reminders = new ArrayList<Recordatorio>();
         
         do {
             clearScreen();
-            System.out.println("Presione 1 para cargar una nueva Tarea-Evento-Recordatorio a tu agenda \n");
-            System.out.println("Presione 2 para buscar una Tarea-Evento-Recordatorio de tu agenda y modificarla \n");
-            System.out.println("Presione 3 para eliminar una Tarea-Evento-Recordatorio de tu agenda \n");
-            System.out.println("Presione 0 para salir del programa \n");
-            opcionesMenu = input.nextInt();
-            input.nextLine();
+            try {
+                System.out.println("Presione 1 para cargar una nueva Tarea-Evento-Recordatorio a tu agenda \n");
+                System.out.println("Presione 2 para buscar una Tarea-Evento-Recordatorio de tu agenda y modificarla \n");
+                System.out.println("Presione 3 para eliminar una Tarea-Evento-Recordatorio de tu agenda \n");
+                System.out.println("Presione 0 para salir del programa \n");
+                opcionesMenu = input.nextInt();
+                input.nextLine();
+                
+            } catch (Exception e) {
+                System.out.println("Ingreso un valor no valido\n");
+            }            
 
             switch(opcionesMenu){
-                case 1://asignar Tarea Evento Recordatorio
+                case 1://Asignar Tarea Evento Recordatorio
+                    
                     clearScreen();                
-                    System.out.println("[1]Tarea \n[2]Evento\n[3]Recordatorio\n");
-                    opcionesSeleccion = input.nextInt();
-                    input.nextLine();
+                    try {
+                        System.out.println("[1]Tarea \n[2]Evento\n[3]Recordatorio\n");
+                        opcionesSeleccion = input.nextInt();
+                        input.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Ingreso un valor no valido\n");
+                    }                    
 
                     switch(opcionesSeleccion){
                         case 1:
@@ -46,7 +66,7 @@ public class App {
                             descripcion= input.nextLine();
                             
                             System.out.print("ingrese el descripcion de la tarea \n"); 
-                            fecha= input.nextLine();
+                            fecha= dateInput(input.nextLine());
 
                             Tarea tarea = new Tarea(nombre,descripcion,fecha);
                             
@@ -63,7 +83,7 @@ public class App {
                             descripcion= input.nextLine();
                             
                             System.out.print("ingrese el descripcion de la Evento \n"); 
-                            fecha= input.nextLine();
+                            fecha= dateInput(input.nextLine());
 
                             Evento evento = new Evento(nombre,descripcion,fecha);
                             
@@ -93,7 +113,7 @@ public class App {
                             descripcion= input.nextLine();
                             
                             System.out.print("ingrese el descripcion del Recordatorio \n"); 
-                            fecha= input.nextLine();
+                            fecha= dateInput(input.nextLine());
                             
                             Recordatorio recordatorio = new Recordatorio(nombre,descripcion,fecha);
                             
@@ -110,13 +130,18 @@ public class App {
                             System.out.println("\n Ingrese una opcion valida ");
                         break;
                     }
-                    
                     break;
+                
                 case 2://buscar y modificar
                     clearScreen();               
-                    System.out.println("[1]Tarea \n[2]Evento\n[3]Recordatorio\n");
-                    opcionesSeleccion = input.nextInt();
-                    input.nextLine();
+                    try {
+                        System.out.println("[1]Tarea \n[2]Evento\n[3]Recordatorio\n");
+                        opcionesSeleccion = input.nextInt();
+                        input.nextLine();
+                        
+                    } catch (Exception e) {
+                        System.out.println("Ingreso un valor no valido\n");
+                    }
                     
                     System.out.print("ingrese el nombre\n");
                     nombre= input.nextLine();
@@ -125,7 +150,7 @@ public class App {
                     descripcion= input.nextLine();
                     
                     System.out.print("ingrese la descripcion\n"); 
-                    fecha= input.nextLine();
+                    fecha= dateInput(input.nextLine());
                     
                     switch(opcionesSeleccion){
                         
@@ -196,11 +221,18 @@ public class App {
                             break;
                     }
                     break;
+                
                 case 3://eliminar
                     clearScreen();                
-                    System.out.println("[1]Tarea \n[2]Evento\n[3]Recordatorio\n");
-                    opcionesSeleccion = input.nextInt();
-                    input.nextLine();
+                    try {
+                        System.out.println("[1]Tarea \n[2]Evento\n[3]Recordatorio\n");
+                        opcionesSeleccion = input.nextInt();
+                        input.nextLine();
+                        
+                    } catch (Exception e) {
+                        System.out.println("Ingreso un valor no valido\n");
+                    }
+                    
 
                     System.out.print("ingrese el nombre\n");
                     nombre= input.nextLine();
@@ -209,7 +241,7 @@ public class App {
                     descripcion= input.nextLine();
                     
                     System.out.print("ingrese la descripcion\n"); 
-                    fecha= input.nextLine();
+                    fecha= dateInput(input.nextLine());
 
                     switch(opcionesSeleccion){
                         case 1:

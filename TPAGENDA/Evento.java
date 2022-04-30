@@ -1,5 +1,5 @@
 package TPAGENDA;
-
+import java.time.LocalDate;
 public class Evento extends Agenda {
 
     protected String horaInicioEvento, horaFinEvento;
@@ -7,7 +7,7 @@ public class Evento extends Agenda {
 
 
     ///Constructor
-    Evento (String nombre, String descripcion, String fecha){
+    Evento (String nombre, String descripcion, LocalDate fecha){
         super(nombre,descripcion,fecha);
     }    
     public void setHoraInicio(String horaInicioEvento){
