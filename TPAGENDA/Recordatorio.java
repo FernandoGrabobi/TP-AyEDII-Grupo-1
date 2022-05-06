@@ -13,8 +13,8 @@ public class Recordatorio extends Agenda {
         this.horaRecordatorio = horaRecordatorio;    
     }
     
-    public String setHoraRecordatorio(){
-        return horaRecordatorio;
+    public String getHoraRecordatorio(){
+        return this.horaRecordatorio;
     }
 
 
