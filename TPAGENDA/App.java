@@ -64,7 +64,7 @@ public class App {
                             System.out.print("ingrese el nombre de la tarea \n");
                             nombre = input.nextLine();
 
-                            System.out.print("ingrese el fecha de la tarea dd/MM/yyyy \n");
+                            System.out.print("ingrese el fecha de la tarea (dd/MM/yyyy) \n");
                             descripcion = input.nextLine();
 
                             System.out.print("ingrese el descripcion de la tarea \n");
@@ -81,7 +81,7 @@ public class App {
                             System.out.print("ingrese el nombre de la Evento \n");
                             nombre = input.nextLine();
 
-                            System.out.print("ingrese el fecha de la Evento \n");
+                            System.out.print("ingrese el fecha de la Evento (dd/MM/yyyy) \n");
                             descripcion = input.nextLine();
 
                             System.out.print("ingrese el descripcion de la Evento \n");
@@ -110,7 +110,7 @@ public class App {
                             System.out.print("ingrese el nombre del Recordatorio \n");
                             nombre = input.nextLine();
 
-                            System.out.print("ingrese el fecha del Recordatorio  \n");
+                            System.out.print("ingrese el fecha del Recordatorio (dd/MM/yyyy) \n");
                             /////
                             fecha = dateInput(input.nextLine());
 
