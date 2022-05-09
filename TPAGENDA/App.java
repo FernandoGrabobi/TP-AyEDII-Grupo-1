@@ -35,7 +35,8 @@ public class App {
             clearScreen();
             try {
                 System.out.println("Presione 1 para cargar una nueva Tarea-Evento-Recordatorio a tu agenda \n");
-                System.out.println("Presione 2 para buscar una Tarea-Evento-Recordatorio de tu agenda y modificarla \n");
+                System.out
+                        .println("Presione 2 para buscar una Tarea-Evento-Recordatorio de tu agenda y modificarla \n");
                 System.out.println("Presione 3 para eliminar una Tarea-Evento-Recordatorio de tu agenda \n");
                 System.out.println("Presione 0 para salir del programa \n");
                 opcionesMenu = input.nextInt();
@@ -248,14 +249,16 @@ public class App {
                     switch (opcionesSeleccion) {
                         case 1:
                             for (Tarea tarea : tasks) {
-                                if (tarea.descripcion == descripcion && tarea.nombre == nombre && tarea.fecha == fecha) {
+                                if (tarea.descripcion == descripcion && tarea.nombre == nombre
+                                        && tarea.fecha == fecha) {
                                     tasks.remove(tarea);
                                 }
                             }
                             break;
                         case 2:
                             for (Evento evento : events) {
-                                if (evento.descripcion == descripcion && evento.nombre == nombre && evento.fecha == fecha) {
+                                if (evento.descripcion == descripcion && evento.nombre == nombre
+                                        && evento.fecha == fecha) {
                                     events.remove(evento);
                                 }
                             }
@@ -263,7 +266,8 @@ public class App {
                             break;
                         case 3:
                             for (Recordatorio recordatorio : reminders) {
-                                if (recordatorio.nombre == nombre && recordatorio.descripcion == descripcion && recordatorio.fecha == fecha) {
+                                if (recordatorio.nombre == nombre && recordatorio.descripcion == descripcion
+                                        && recordatorio.fecha == fecha) {
                                     reminders.remove(recordatorio);
                                 }
                             }
